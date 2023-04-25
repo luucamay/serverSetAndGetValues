@@ -8,6 +8,11 @@ When your server receives a request on http://localhost:4000/set?somekey=someval
 
 When it receives a request on http://localhost:4000/get?key=somekey it should return the value stored at somekey.
 
+## Set up the application
+
+1. Clone this repository
+2. Inside the folder of the repository run `node server.js`
+
 ## Limitations
 
 - When url contains the "set" parameter, it does not verify the parameters "key" and "value" are not empty

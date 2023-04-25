@@ -1,6 +1,6 @@
 # Set and get values in a server
 
-This is a program that runs a server that is accessible on http://localhost:4000/.
+This is a program that runs a server that is accessible on http://localhost:4000/ or https://server-set-and-get-values.vercel.app/set?somekey=somevalue
 
 ## Features
 

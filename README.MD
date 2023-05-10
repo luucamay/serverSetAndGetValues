@@ -17,3 +17,12 @@ When it receives a request on http://localhost:4000/get?key=somekey it should re
 
 - When url contains the "set" parameter, it does not verify the parameters "key" and "value" are not empty
 - The server stores values in memory but not in a file or databse
+
+## TO DO on saving data to a file:
+
+-check if a file already exists?
+
+- if it does not exist create the file
+- open the file
+- write in the file
+- close the file

@@ -1,3 +1,4 @@
+const fs = require('fs');
 const http = require('http');
 const { URL } = require('url');
 
@@ -45,6 +46,8 @@ describe('Server tests', () => {
     const requestToSet = http.request(setUrl, (res) => {
       expect(res.statusCode).toBe(200);
       expect(memory).toHaveProperty('somekey', 'somevalue');
+      const fileContent = fs.readFileSync('db_test.txt', 'utf8');
+      expect(fileContent).toContain('somekey=somevalue');
       done();
     });
     requestToSet.end();

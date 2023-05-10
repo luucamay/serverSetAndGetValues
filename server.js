@@ -1,4 +1,5 @@
 const http = require('http');
+const fs = require('fs');
 const { URL } = require('url');
 
 const memory = {};
@@ -8,6 +9,14 @@ const server = http.createServer((req, res) => {
 
   if (pathname === '/set' && searchParams) {
     for (const [key, value] of searchParams) {
+
+      fs.writeFile('db_test.txt', key + '=' + value + '\n', { flag: 'a+' }, err => {
+        if (err) {
+          console.error(err);
+        }
+        // file written successfully
+      });
+
       memory[key] = value;
     }
     res.writeHead(200, { 'Content-Type': 'text/plain' });
